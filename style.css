@@ -33,14 +33,19 @@ header button {
   font-family: Poppins;
   font-weight: normal;
 }
-#recordButton {
+
+/* 
+    Selector hierarchy
+      tagname -> #id -> .class
+ */
+
+header .topButtons {
   background-color: transparent;
   border: 0;
 }
 
-#compareButton {
-  background-color: transparent;
-  border: 0;
+header .topButtons:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .charts-container {
@@ -56,13 +61,50 @@ header button {
   border: 1px white solid;
 }
 
-.table {
+#table {
   width: 100%;
   margin-top: 3rem;
   border: 1px white solid;
   font-size: 12px;
+  border-collapse: collapse;
+}
+
+.header-row {
+  border-bottom: 1px solid white;
 }
 
 th {
   font-weight: 350;
+}
+td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  text-align: center;
+  font-weight: 300;
+}
+
+table tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.picture {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.name-td {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.left {
+  text-align: left;
+}
+
+table tr > td:first-child {
+  padding-right: 40px;
 }

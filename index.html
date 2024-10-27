@@ -27,21 +27,22 @@
     <section class="content-container container">
       <section class="charts-container">
         <div class="mainChart" id="goalsChart">
-          <p>Top Goalscorers</p>
-          <canvas id="goals"></canvas>
+          <p>Most Goal Contributions</p>
+          <canvas id="contributions"></canvas>
         </div>
         <div class="mainChart" id="assistsChart">
-          <p>Top Assisters</p>
-          <canvas id="assists"></canvas>
+          <p>Highest Efficiency</p>
+          <canvas id="efficiency"></canvas>
         </div>
       </section>
       <!-- end of charts-container -->
       <section class="table-container">
-        <table class="table">
-          <tr>
-            <th>Name</th>
+        <table id="table">
+          <tr class="header-row">
+            <th>Rank</th>
+            <th class="left">Name</th>
             <th>Position</th>
-            <th>Country</th>
+            <th class="left">Country</th>
             <th>Games</th>
             <th>Goals</th>
             <th>Assists</th>
@@ -51,5 +52,12 @@
         </table>
       </section>
     </section>
+
+    <!-- filter form-->
+    <div id="filterForm" style="display: none">
+      <label for="positionFilter">Position:</label>
+      <input type="text" id="positionFilter" name="positionFilter" />
+      <button id="applyFilterButton">Apply Filter</button>
+    </div>
   </body>
 </html>

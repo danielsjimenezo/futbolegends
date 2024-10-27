@@ -1,5 +1,6 @@
 // defines bar colors
 const barColors = ["#FF4F8B"];
+const barColors2 = ["#AF95FC"];
 
 let obj = {
   a: 1,
