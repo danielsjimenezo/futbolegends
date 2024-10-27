@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
+    <script src="functionality.js" type="module" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html -->
+
+    <header class="container">
+      <img src="search.png" alt="" />
+      <button class="topButtons" id="recordButton">Record Book</button>
+      <button class="topButtons" id="compareButton">Compare Players</button>
+      <img src="funnel.png" alt="" />
+    </header>
+    <section class="content-container container">
+      <section class="charts-container">
+        <div class="mainChart" id="goalsChart">
+          <p>Top Goalscorers</p>
+          <canvas id="goals"></canvas>
+        </div>
+        <div class="mainChart" id="assistsChart">
+          <p>Top Assisters</p>
+          <canvas id="assists"></canvas>
+        </div>
+      </section>
+      <!-- end of charts-container -->
+      <section class="table-container">
+        <table class="table">
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Country</th>
+            <th>Games</th>
+            <th>Goals</th>
+            <th>Assists</th>
+            <th>G+A</th>
+            <th>G+A/Games</th>
+          </tr>
+        </table>
+      </section>
+    </section>
+  </body>
+</html>
